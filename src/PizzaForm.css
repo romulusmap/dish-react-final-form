@@ -1,0 +1,154 @@
+:root {
+    --input-field-color: #e8eeef;
+    --input-field-color-focus: #85A3AD;
+    --form-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.25);
+    --input-field-shadow: 4px 4px 9px -4px rgba(0, 0, 0, 0.25);
+    --form-border: 1px dashed #4A6D7C;
+}
+
+form {
+    position: relative;
+    background-color: #e1e5ea;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    border: var(--form-border);
+    max-width: 500px;
+    min-height: 390px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0px 0px 10px 1px #99ADB6;
+}
+
+label {
+    max-width: 160px;
+    margin: 5px 15px 5px 5px;
+}
+
+@media (max-width: 830px) {
+    form {
+        max-width: 255px;
+    }
+
+    label {
+        max-width: 100%;
+    }
+}
+
+form div {
+    display: flex;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preperation-time div {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.preperation-time input {
+    width: 64px;
+}
+
+.preperation-time input:nth-of-type(1) {
+    border-radius: 5px 0px 0px 5px;
+    border-width: 1px 0px 1px 1px;
+}
+
+.preperation-time input:nth-of-type(2) {
+    border-radius: 0px;
+    border-width: 1px 0px 1px 0px;
+}
+
+.preperation-time input:nth-of-type(3) {
+    border-radius: 0px 5px 5px 0px;
+    border-width: 1px 1px 1px 0px;
+}
+
+form p {
+    font-size: 12px;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.hours {
+    right: 188px;
+}
+
+.minutes {
+    right: 120px;
+}
+
+.seconds {
+    right: 60px;
+}
+
+.condition-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.condition-fields div {
+    width: 100%;
+}
+
+input, select, textarea, option {
+    margin-left: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 30em;
+    width: 192px;
+    outline: none;
+    background-color: var(--input-field-color);
+    border: 1px solid var(--input-field-color-focus);
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+input:focus, input:focus::placeholder {
+    background-color: var(--input-field-color-focus);
+    color: white;
+}
+
+.buttons {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    background-color: var(--input-field-color-focus);
+    box-shadow: var(--input-field-shadow);
+    padding: 10px 20px 10px 20px;
+    color: white;
+    transition: .2s;
+}
+
+button:hover, button:focus {
+    background-color: #4a6d7c;
+    color: #C6C5B9;
+    outline: none;
+}
+
+.swal-text {
+    border-radius: 20px;
+    padding: 20px;
+    border: var(--form-border);
+    font-family: monospace;
+    white-space: pre;
+}
